@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="FacebookReach API documentation for Facebook collection, monitoring, sessions, jobs, cached data, and workspace APIs." />
+  <meta name="theme-color" content="#6d5dfc" />
+  <title>FacebookReach API Documentation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#overview" aria-label="FacebookReach API home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" role="img"><path d="M7 4h18a3 3 0 0 1 3 3v18a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3Z"/><path class="brand-mark-cut" d="M19.8 10.3h3V6.2c-.5-.1-2.2-.2-4.1-.2-4 0-6.7 2.4-6.7 6.8v3.8H7.5v4.6H12V28h5.5v-6.8h4.1l.7-4.6h-4.8v-3.3c0-1.3.4-3 2.3-3Z"/></svg>
+      </span>
+      <span class="brand-copy">
+        <strong>FacebookReach</strong>
+        <small>API Docs</small>
+      </span>
+    </a>
+
+    <button class="mobile-nav-toggle icon-button" id="mobileNavToggle" aria-label="Open documentation navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <button class="search-trigger" id="searchTrigger" type="button" aria-label="Search documentation">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.35-4.35m2.35-5.65A8 8 0 1 1 3 11a8 8 0 0 1 16 0Z"/></svg>
+      <span>Search documentation...</span>
+      <kbd>⌘K</kbd>
+    </button>
+
+    <nav class="top-actions" aria-label="Top links">
+      <a href="https://github.com/jakiiii/facebook-reach" target="_blank" rel="noreferrer">API Repo</a>
+      <a href="https://github.com/jakiiii/fbreach-apidoc" target="_blank" rel="noreferrer">Docs Repo</a>
+      <button class="icon-button" id="themeToggle" type="button" aria-label="Toggle color theme">
+        <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v2m0 14v2M3 12h2m14 0h2M5.64 5.64l1.42 1.42m9.88 9.88 1.42 1.42m0-12.72-1.42 1.42M7.06 16.94l-1.42 1.42"/><circle cx="12" cy="12" r="4"/></svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 15.1A8.5 8.5 0 0 1 8.9 3.5 8.5 8.5 0 1 0 20.5 15.1Z"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <div class="shell">
+    <aside class="sidebar" id="sidebar" aria-label="API sections">
+      <div class="sidebar-inner">
+        <a class="overview-link nav-link" href="#overview" data-route="overview">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4zM8 9h8M8 13h5"/></svg>
+          Overview
+        </a>
+        <div id="sidebarGroups"></div>
+        <div class="sidebar-footer">
+          <span>FacebookReach API</span>
+          <small id="docsVersion">Static developer documentation</small>
+        </div>
+      </div>
+    </aside>
+
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <main class="main" id="mainContent">
+      <div class="loading-state">
+        <div class="loading-mark"></div>
+        <p>Loading API documentation…</p>
+      </div>
+    </main>
+  </div>
+
+  <div class="search-modal" id="searchModal" role="dialog" aria-modal="true" aria-labelledby="searchTitle" hidden>
+    <div class="search-dialog">
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.35-4.35m2.35-5.65A8 8 0 1 1 3 11a8 8 0 0 1 16 0Z"/></svg>
+        <input id="searchInput" type="search" autocomplete="off" placeholder="Search endpoints, parameters, paths…" />
+        <kbd>Esc</kbd>
+      </div>
+      <div class="search-results" id="searchResults" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="./assets/api-data.js"></script>
+  <script src="./assets/app.js"></script>
+</body>
+</html>

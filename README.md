@@ -4,7 +4,7 @@ Public, dependency-free API documentation for FacebookReach, built with plain HT
 
 ## Live documentation
 
-https://jakiiii.github.io/fbreach-apidoc/
+https://jakiiii.github.io/fbreach-api-doc/
 
 ## Source of truth
 
